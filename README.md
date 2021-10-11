@@ -56,19 +56,19 @@ yarn build && yarn start
 ### Iniciando em Desenvolvimento
 
 ```sh
-docker-compose up -d --build
+make dev #docker-compose up -d --build
 ```
 
 ### Iniciando em Produção
 
 ```sh
-docker-compose -f docker-compose.yaml -f docker-compose.prod.yaml up -d --build
+make prod #docker-compose -f docker-compose.yaml -f docker-compose.prod.yaml up -d --build
 ```
 
 ### Parando Containers
 
 ```sh
-docker-compose down
+make down #docker-compose down
 ```
 
 ---
