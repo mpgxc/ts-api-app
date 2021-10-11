@@ -1,14 +1,14 @@
 FROM node:14 as development
 
-WORKDIR /home/node/app
+WORKDIR /app
 
-COPY package*.json  yarn.lock ./
+COPY package.json  .
 
 RUN yarn
 
 COPY . .
 
-# RUN yarn prisma generate
+RUN yarn prisma generate
 
 FROM development as production
 
